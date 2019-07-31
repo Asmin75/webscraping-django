@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quotes List</title>
+</head>
+<body>
+
+<h1>Quotes List</h1>
+
+<table border="1">
+<thead>
+    <tr>
+    <th>Title</th>
+    <th>Author</th>
+{#    <th>Tags</th>#}
+    </tr>
+</thead>
+<tbody>
+    {% for quotes in quotes_list %}
+    <tr>
+    <td>{{ quotes.title|capfirst }}</td>
+    <td>{{ quotes.author|capfirst|truncatechars:10 }}</td>
+{#    <td>{{ capfirst.tags }}</td>#}
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+</body>
+</html>
